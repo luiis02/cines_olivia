@@ -1,0 +1,39 @@
+CREATE TABLE USERS(
+   USERNAME VARCHAR(10) PRIMARY KEY,
+   NOMBRE VARCHAR(10) NOT NULL,
+   APELLIDO VARCHAR(10) NOT NULL,
+   TELEFONO INT(9) NULL UNIQUE, 
+   CORREO VARCHAR(32) NOT NULL UNIQUE,
+   CONTRASENIA VARCHAR(128) NOT NULL,
+   TIPO VARCHAR(10) NOT NULL
+);
+
+user root, pswrd root
+user paco, pswrd 1234567P
+
+CREATE TABLE peliculas (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    categoria VARCHAR(255),
+    portada VARCHAR(255),
+    director VARCHAR(255),
+    estreno DATE,
+    img1 VARCHAR(255),
+    img2 VARCHAR(255),
+    img3 VARCHAR(255),
+    img4 VARCHAR(255),
+    interpretes VARCHAR(255),
+    sinopsis TEXT,
+    tematicas VARCHAR(255),
+    informacion TEXT,
+    valoracion DECIMAL(2,1),
+    comentarios TEXT
+)AUTO_INCREMENT=10;
+
+CREATE TABLE comentarios(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    idpeli INT NOT NULL,
+    USERNAME VARCHAR(10) NOT NULL,
+    comentario text,
+    valoracion DECIMAL(2,1)
+);

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="imagenes/palomitas.png">
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&family=Tilt+Warp&display=swap" rel="stylesheet">
+    <title>CONTACTO CINES OLIVIA</title>
+    <script src="nohtml.js"></script>
+</head>
+<header>
+    <section class="arriba">
+        <section class="logo">
+            <img id="logo" src="imagenes/logo.png">
+        </section>
+        <a href="index.html" class="nombrecine">
+            <section>
+                <h1 id="nombrecine">CINES OLIVIA</h1>
+            </section>
+        </a>
+        <section class="formulariologin">
+            <form id="formulariologin" method="post" action="login.php">
+                <label for="usuario" class="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" class="usuario2"><br>
+                <label for="contrasena" class="contrasenia">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" class="contrasena"><br>
+
+                <button type="submit" class="iniciosesion">Iniciar sesión</button>
+                <a id="registro" href="altausuarios.html" class="registro">Registro de usuarios</a>
+            </form>
+        </section>
+    </section>
+    <section class="abajo">
+        <nav>
+            <ul>
+                <li><a class="bmenu" href="index.html">Inicio</a></li>
+                <li><a class="bmenu" href="estrenos.html">Estrenos</a></li>
+                <li><a class="bmenu" href="cartelera.html">Cartelera</a></li>
+                <li><a class="bmenu" href="horarios.html">Horarios</a></li>
+                <li><a class="bmenu" href="tarifas.html">Tarifa</a></li>
+                <li><a class="bmenu" href="informacion.html">Información</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<body>
+    <section id="bloque">
+        <h1 class="tarifatitulo">Contacto:</h1>
+        <table class="tarifa">
+            <tr class="apartado-contacto">
+                <th class="contacto-dat">Nombre:</th>
+                <th class="contacto-dato">
+                    <p>Luis</p>
+                </th>
+            </tr>
+            <tr class="apartado-contacto">
+                <th>Apellido 1:</th>
+                <th class="contacto-dato">Alcalde</th>
+            </tr>
+            <tr class="apartado-contacto">
+                <th>Apellido 2:</th>
+                <th class="contacto-dato">García</th>
+            </tr>
+            <tr class="apartado-contacto">
+                <th>Email:</th>
+                <th class="contacto-dato">luisalcalde@correo.ugr.es</th>
+            </tr>
+            <tr class="apartado-contacto">
+                <th>Email 2:</th>
+                <th class="contacto-dato">e.luisalcalde@correo.ugr.es</th>
+            </tr>
+            <tr class="apartado-contacto">
+                <th>Numero de telefono:</th>
+                <th class="contacto-dato">XXX XX XX XX</th>
+            </tr>
+
+        </table>
+
+        <p id="contactotexto">¿Deseas mejor que me ponga en contacto contigo? Sin problema, rellena este formulario:</p>
+        <form action="submit.php" method="POST" class="formulario-contacto">
+            <label for="contacto-nombre">Nombre:</label>
+            <input type="text" id="contacto-nombre" name="nombre" required>
+
+            <label for="contacto-email">Correo electrónico:</label>
+            <input type="email" id="contacto-email" name="email" required>
+
+            <label for="contacto-asunto">Asunto:</label>
+            <input type="text" id="contacto-asunto" name="asunto" required>
+
+            <label for="contacto-mensaje">Mensaje:</label>
+            <textarea id="contacto-mensaje" name="mensaje" required></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</body>
+<footer>
+    <a class="no-subrayado" href="">Contacto</a>
+    <a class="no-subrayado" href="como_se_hizo.pdf">Como se hizo</a>
+</footer>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="icon" href="imagenes/palomitas.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Secular+One&family=Tilt+Warp&display=swap"
+      rel="stylesheet"
+    />
+    <title>CINES OLIVIA</title>
+    <script src="nohtml.js"></script>
+
+  </head>
+
+  <body>
+    <header>
+      <section class="arriba">
+        <img id="logo" src="imagenes/logo.png" />
+        <a href="index.html" class="nombrecine">
+          <h1 id="nombrecine">CINES OLIVIA</h1>
+        </a>
+        <section class="formulariologin" method="post" action="login.php">
+          <form id="formulariologin" method="post" action="login.php">
+            <label for="usuario" class="usuario">Usuario:</label>
+            <input
+              type="text"
+              id="usuario"
+              name="usuario"
+              class="usuario2"
+            /><br />
+            <label for="contrasena" class="contrasenia">Contraseña:</label>
+            <input
+              type="password"
+              id="contrasena"
+              name="contrasena"
+              class="contrasena"
+            /><br />
+            <button type="submit" class="iniciosesion" id="iniciosesion">
+              Iniciar sesión
+            </button>
+            <a id="registro" href="altausuarios.html" class="registro">
+              <p>Registro de usuarios</p>
+            </a>
+            <p id="warnings" class="warnings"></p>
+          </form>
+        </section>
+      </section>
+      <section class="abajo">
+        <nav id="nav-abajo">
+          <ul id="ul-abajo">
+            <li><a class="bmenu" id="cmenu" href="index.html">Inicio</a></li>
+            <li><a class="bmenu" href="estrenos.html">Estrenos</a></li>
+            <li><a class="bmenu" href="cartelera.html">Cartelera</a></li>
+            <li><a class="bmenu" href="horarios.html">Horarios</a></li>
+            <li><a class="bmenu" href="tarifas.html">Tarifas</a></li>
+            <li><a class="bmenu" href="informacion.html">Información</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <table id="admin-panel" class="admin-panel">
+        <thead id="admin-head" class="admin-head">
+          <tr>
+            <th id="admin-title" class="admin-title">Título</th>
+            <th id="admin-title" class="admin-title">Categoría</th>
+            <th id="admin-title" class="admin-title">Portada</th>
+            <th id="admin-title" class="admin-title">Director</th>
+            <th id="admin-title" class="admin-title">Estreno</th>
+            <th id="admin-title" class="admin-title">Imagen 1</th>
+            <th id="admin-title" class="admin-title">Imagen 2</th>
+            <th id="admin-title" class="admin-title">Imagen 3</th>
+            <th id="admin-title" class="admin-title">Imagen 4</th>
+            <th id="admin-title" class="admin-title">Intérpretes</th>
+            <th id="admin-title" class="admin-title">Sinopsis</th>
+            <th id="admin-title" class="admin-title">Temáticas</th>
+            <th id="admin-title" class="admin-title">Información</th>
+            <th id="admin-title" class="admin-title">Valoración</th>
+            <th id="admin-title" class="admin-title">Id</th>
+            <th id="admin-title" class="admin-title">Gestionar</th>
+          </tr>
+        </thead>
+        <tbody id="tbodygest" class="tbodygest">
+          <tr>
+            <form action="creapeli.php" method="POST" name="formulario2" id="formpeliinsert">
+              <td><input type="text" name="titulo" value="Titulo" /></td>
+              <td class="td-opciones">
+                <select name="opcion" id="opcion" class="select-options">
+                  <option value="estrenos">Estrenos</option>
+                  <option value="cartelera">Cartelera</option>
+                  <option value="valoradas">Valoradas</option>
+                  <option value="proximas">Proximas</option>
+                </select>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="nombre_portada"
+                  value="Nombre Portada"
+                />
+              </td>
+              <td><input type="text" name="director" value="Director" /></td>
+              <td><input type="date" name="fecha_estreno" id="fecha_estreno" /></td>
+              <td>
+                <input
+                  type="text"
+                  name="nombre_imagen_1"
+                  value="Nombre Imagen 1"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="nombre_imagen_2"
+                  value="Nombre Imagen 2"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="nombre_imagen_3"
+                  value="Nombre Imagen 3"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="nombre_imagen_4"
+                  value="Nombre Imagen 4"
+                />
+              </td>
+              <td>
+                <input type="text" name="interpretes" value="Interpretes" />
+              </td>
+              <td><input type="text" name="sinopsis" value="Sinopsis" /></td>
+              <td><input type="text" name="tematicas" value="Temáticas" /></td>
+              <td>
+                <input type="text" name="informacion" value="Información" />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  name="valoracion"
+                  value="Valoración"
+                  id="valoracion"
+                  step="0.1"
+                />
+              </td>
+              <td><button type="submit" id="enviar">AÑADIR</button></td>
+              <td></td>
+            </form>
+          </tr>
+        </tbody>
+      </table>
+      <section id="ventana-emergente" class="ventana-emergente">
+          <form action="alterpeli.php" method="POST" name="formulario1" id="formnuevo">
+            <input type="text" name="titulo" value="Titulo" id="titulin" class="titulo"/>
+              <select name="opcion"  class="select-options" id="opciones">
+                <option value="estrenos">Estrenos</option>
+                <option value="cartelera">Cartelera</option>
+                <option value="valoradas">Valoradas</option>
+                <option value="proximas">Proximas</option>
+              </select>
+              <input
+                type="text"
+                name="nombre_portada"
+                value="Nombre Portada"
+                class="portada"
+              />
+            
+            <input type="text" name="director" value="Director" class="director"/>
+            <br>
+            <input type="date" name="fecha_estreno" class="estreno"/>
+            <br>
+              <input
+                type="text"
+                name="nombre_imagen_1"
+                value="Nombre Imagen 1"
+                class="img1"
+              />
+              <input
+                type="text"
+                name="nombre_imagen_2"
+                value="Nombre Imagen 2"
+                class="img2"
+              />
+              <input
+                type="text"
+                name="nombre_imagen_3"
+                value="Nombre Imagen 3"
+                class="img3"
+              />
+              <input
+                type="text" name="nombre_imagen_4"value="Nombre Imagen 4" class="img4"/>            
+              <input type="text" name="interpretes" value="Interpretes" class="interpretes" />
+            <input type="text" name="sinopsis" value="Sinopsis" class="sinopsis" />
+            <input type="text" name="tematicas" value="Temáticas" class="tematicas"/>
+              
+            <input type="text" name="informacion" value="Información"  class="informacion"/>
+
+              <input type="number" name="valoracion" value="Valoración" step="0.01" id="valora" class="valoracion">
+            <input type="text" name="id" value="ID" class="id" readonly/>
+            <br><br>  <button type="submit" id="enviar" onclick="" class="envia-act">Actualizar</button> <br><br>
+        </form>
+        <button onclick="cerrardesplegable()">CERRAR</button>
+      </section>
+      <script src="gestion.js"></script>
+      <script src="validapeli.js"></script>
+    </main>
+    <footer>
+      <a class="no-subrayado" href="contacto.html">Contacto</a>
+      <a class="no-subrayado" href="como_se_hizo.pdf">Como se hizo</a>
+  </footer>
+
+  <script src="validamodpeli.js"></script>
+  </body>
+</html>
